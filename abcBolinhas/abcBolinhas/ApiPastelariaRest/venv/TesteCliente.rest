@@ -1,0 +1,39 @@
+### Verbo GET – listar todos os clientes
+GET http://localhost:8000/cliente/ HTTP/1.1
+
+### Verbo GET – listar um cliente pelo ID
+GET http://localhost:8000/cliente/1 HTTP/1.1
+
+### Verbo POST – adicionar um cliente
+POST http://localhost:8000/cliente/ HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Cliente",
+    "cpf": "321654",  
+    "telefone": "987654",  
+    "compra_fiado": 3335,
+    "dia_fiado": 15,
+    "senha": "564"
+}
+
+### Verbo PUT – atualizar um cliente pelo ID
+PUT http://localhost:8000/cliente/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome" : "Cliente 2 Atualizado",
+    "cpf" : "987651209",
+    "telefone" : "1234567890",
+    "senha" : "novasenha",
+    "compra_fiado" : 0,
+    "dia_fiado" : 5
+}
+
+### Verbo DELETE - excluir um cliente pelo ID
+DELETE http://localhost:8000/cliente/1 HTTP/1.1
+
+
+
+
+
